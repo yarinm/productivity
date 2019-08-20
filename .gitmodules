@@ -7,3 +7,6 @@
 [submodule "tmux/plugins/tmux-powerline"]
 	path = tmux/plugins/tmux-powerline
 	url = https://github.com/erikw/tmux-powerline.git
+[submodule "tmux/kube-tmux"]
+	path = tmux/kube-tmux
+	url = https://github.com/jonmosco/kube-tmux.git
