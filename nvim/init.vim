@@ -28,6 +28,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Adds the ability to use multi-cursors with C-n
+Plug 'terryma/vim-multiple-cursors'
+
 " fzf everywhere
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -121,6 +124,14 @@ syntax on
 set ruler
 set number
 
+" GitGutter set colors to be like git
+" Always show gutter column
+set signcolumn=yes
+
+"Color gutter like git
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
