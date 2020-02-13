@@ -152,6 +152,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set autoread " reloads files automatically
+
 " Good FZF defaults
 "" fzf.vim
 set wildmode=list:longest,list:full
