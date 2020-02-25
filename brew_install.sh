@@ -31,4 +31,9 @@ brew install \
      telnet \
      tig \
      tmux \
-     topgrade \
+     topgrade
+
+brew cask install copyq
+
+echo "Things needed to install manually:"
+echo "VSCode Karabiner-elements iterm2 spectacle spotify telegram wireshark chrome edge"
