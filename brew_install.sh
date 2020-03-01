@@ -6,6 +6,7 @@ brew install \
      cscope \
      ctags \
      dep \
+     docker \
      fd \
      fpp \
      fzf \
@@ -17,9 +18,9 @@ brew install \
      helm \
      htop \
      jq \
-     k9s \
+     derailed/k9s/k9s \
      kube-ps1 \
-     kubectl-debug \
+     aylei/tap/kubectl-debug \
      kubectx \
      kubernetes-cli \
      kubernetes-helm \
@@ -31,9 +32,25 @@ brew install \
      telnet \
      tig \
      tmux \
-     topgrade
+     topgrad \
+     fontconfige
 
 brew cask install copyq
+brew cask install google-chrome
+brew cask install spotify
+brew cask install telegram
+brew cask install spectacle
+brew cask install wireshark
+brew cask install visual-studio-code
+
+# installing Oh-my-zsh
+brew cask install iterm2
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew install zsh
+
+# Install powerline fonts
+curl https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf -o /Library/Fonts/PowerlineSymobols.otf -L
+curl https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf -o /Library/Fonts/10-powerline-symbols.conf -L
 
 echo "Things needed to install manually:"
-echo "VSCode Karabiner-elements iterm2 spectacle spotify telegram wireshark chrome edge"
+echo "Karabiner-elements"
