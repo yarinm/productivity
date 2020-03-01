@@ -17,7 +17,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 # theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/../themes/powerlevel10k
 
+ln -sf "$repo_path/zsh/.p10k.zsh" ~/.p10k.zsh
 ln -sf "$repo_path/zsh/.zshrc" ~/.zshrc
 ln -sf "$repo_path/zsh/.private_zshrc" ~/.private_zshrc
+
 # install fzf keybindings
 $(brew --prefix)/opt/fzf/install
