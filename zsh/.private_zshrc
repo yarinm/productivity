@@ -1,6 +1,4 @@
 
-source ~/workspace/productivity/zsh/keybindings/fzf.sh
-export MOBIUS_DISABLE_INNER_TMUX=1
 export PATH=/usr/local/bin:/Users/$USER/bin/:/Users/$USER/anaconda2/bin:/Users/$USER/workspace/fab/:$PATH
 
 #[[ -s "/etc/local/grc.zsh" ]] && source /etc/local/grc.zsh
