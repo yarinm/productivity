@@ -42,6 +42,7 @@ brew cask install telegram
 brew cask install spectacle
 brew cask install wireshark
 brew cask install visual-studio-code
+brew cask install slack
 
 # installing Oh-my-zsh
 brew cask install iterm2
