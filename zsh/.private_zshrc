@@ -4,14 +4,20 @@ export PATH=/usr/local/bin:/Users/$USER/bin/:/Users/$USER/anaconda2/bin:/Users/$
 #[[ -s "/etc/local/grc.zsh" ]] && source /etc/local/grc.zsh
 #[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
 
+# kubernetes
 alias h='helm'
 alias k=kubectl
 alias k9=k9s
+
+KUBE_TMUX_SYMBOL_ENABLE=false
+
+# editors
 alias vi=nvim
 alias vim=nvim
 alias v=nvim
 
-KUBE_TMUX_SYMBOL_ENABLE=false
+# git
+alias lg=lazygit
 
 export BAT_STYLE=plain
 
