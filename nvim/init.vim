@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim' " Grep everywhere
 Plug 'tpope/vim-fugitive'
+Plug 'godlygeek/tabular'
 
 Plug 'majutsushi/tagbar'
 
@@ -247,6 +248,10 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
+"" Save
+inoremap <Leader>s <c-o>:Update<CR>
+
+
 
 " Commands that are using fzy (it understands better what you itend to search)
 " for file names, tags etc.
@@ -308,7 +313,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 1
 let g:go_highlight_extra_types = 1
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -344,4 +349,6 @@ augroup go
   au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 
 augroup END
+
+autocmd FileType sql setlocal shiftwidth=4 softtabstop=4 expandtab
 
