@@ -22,6 +22,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Language packs
 Plug 'fatih/vim-go'
+Plug 'jparise/vim-graphql'
+Plug 'towolf/vim-helm'
+Plug 'benmills/vimux-golang'
+
 
 " Code completion
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -37,12 +41,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim' " Grep everywhere
 Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
+Plug 'djoshea/vim-autoread'
 
 Plug 'majutsushi/tagbar'
 
 " Run commands in a tmux pane
 Plug 'benmills/vimux'
-Plug 'benmills/vimux-golang'
 
 " File explorer
 Plug 'scrooloose/nerdtree'
@@ -302,6 +306,7 @@ endfunction
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
+let g:go_doc_popup_window = 1
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -351,4 +356,7 @@ augroup go
 augroup END
 
 autocmd FileType sql setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd BufEnter *.yaml.gotmpl :setlocal filetype=helm
+autocmd BufEnter helmfile.yaml :setlocal filetype=helm
+
 
