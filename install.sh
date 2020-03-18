@@ -34,6 +34,12 @@ brew install \
      tmux \
      topgrade \
      jesseduffield/lazygit/lazygit
+     helmfile \
+     flyway \
+     weaveworks/tap/eksctl \ 
+     protoc \
+     protobuf \
+     helmfile
 
 brew cask install copyq \
      google-chrome \
@@ -42,7 +48,8 @@ brew cask install copyq \
      spectacle \
      wireshark \
      visual-studio-code \
-     slack
+     slack \
+     pgadmin4
 
 # installing Oh-my-zsh
 brew cask install iterm2

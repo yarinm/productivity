@@ -16,6 +16,7 @@ if !filereadable(vimplug_exists)
   autocmd VimEnter * PlugInstall
 endif
 
+let g:polyglot_disabled = ['mustache']
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -356,7 +357,11 @@ augroup go
 augroup END
 
 autocmd FileType sql setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd BufEnter *.yaml.gotmpl :setlocal filetype=helm
-autocmd BufEnter helmfile.yaml :setlocal filetype=helm
+
+augroup filetypedetect
+au BufRead,BufNewFile *.yaml.gotmpl :set filetype=helm
+au BufRead,BufNewFile *.tpl set filetype=helm
+au BufRead,BufNewFile helmfile.yaml set filetype=helm
+augroup END
 
 
