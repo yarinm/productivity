@@ -1,14 +1,22 @@
-let mapleader=','
+let mapleader=" "
 
 nnoremap <silent> <leader>c :actionlist
-
 " Source navigation
 noremap gr :action FindUsages<CR>
+noremap gl :action uk.co.ben_gibson.git.link.UI.Action.Menu.MenuAction.Clipboard<CR>
 
 " Refactoring
 noremap <leader>rr :action RefactoringMenu<CR>
 noremap <leader>rn :action RenameElement<CR>
 noremap <leader>rm :action ExtractMethod<CR>
+
+vnoremap <leader>rs :action EditorSortLines<CR>
+
+" Operations
+noremap <leader>tr :action Run<CR>
+noremap <leader>tR :action RunClass<CR>
+noremap <leader>td :action Debug<CR>
+noremap <leader>tD :action DebugClass<CR>
 
 " Move lines
 nnoremap <A-j> :m .+1<CR>==
@@ -21,16 +29,12 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR> inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR> inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR> inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR> "set clipboard+=unnamed set keymodel+=startsel
 
-"set keymodel+=startse
-nnoremap <S-Left> :action EditorLeftWithSelection<CR>
-nnoremap <S-Right> :action EditorRightWithSelection<CR>
-nnoremap <S-Up> :action EditorUpWithSelection<CR>
-nnoremap <S-Down> :action EditorDownWithSelection<CR>
-
-inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
-inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
-inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
-inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
-
+set relativenumber
+set showmode
+set multiple-cursors
 set ideajoin
+set easymotion
+
+set idearefactormode

@@ -10,9 +10,11 @@ read -p "Using $repo_path -- Press enter to continue..." REPLY
 
 #plugins
 
-cd $ZSH_CUSTOM/plugins/
+#cd $ZSH_CUSTOM/../plugins/
+#echo $(pwd)
+cd /Users/yarin/.oh-my-zsh/custom
 git clone https://github.com/unixorn/warhol.plugin.zsh.git warhol
-git clone https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions zsh-autosuggestions
 
 # theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/../themes/powerlevel10k
