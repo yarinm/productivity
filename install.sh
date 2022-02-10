@@ -33,6 +33,7 @@ brew install \
      minikube \
      neovim \
      netcat \
+     python@3.10 \
      reattach-to-user-namespace \
      ripgrep \
      telnet \
