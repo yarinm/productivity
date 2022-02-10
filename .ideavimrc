@@ -1,5 +1,9 @@
 let mapleader=" "
 
+" Editing
+nnoremap s
+nnoremap S
+
 nnoremap <silent> <leader>c :actionlist
 " Source navigation
 noremap gr :action FindUsages<CR>
@@ -31,10 +35,87 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR> inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR> inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR> inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR> "set clipboard+=unnamed set keymodel+=startsel
 
+" File Management
+nnoremap <leader>fs :action ReformatCode<CR> :w<CR>
+nnoremap <leader>fy :action CopyAbsolutePath<CR>
+nnoremap <leader>fm :action FileMenu<CR>
+
+" Ace Jump / Easymotion
+nmap <leader>jj <Plug>(easymotion-s)
+
+" Window Management
+nnoremap <leader>w/ :vsplit<CR>
+nnoremap <leader>w% :vsplit<CR>
+nnoremap <leader>ws :split<CR>
+nnoremap <leader>w" :split<CR>
+nnoremap <leader>wd :q<CR>
+nnoremap <leader>wm :action Unsplit<CR>
+nnoremap <leader>zm :action ToggleZenMode<CR>
+nnoremap <leader>tz :action ToggleZenMode<CR>
+nnoremap <leader>tl :action EditorToggleShowLineNumbers<CR>
+nmap <leader>w <C-w>
+
+" Project Management
+nnoremap <leader>pf :action GotoFile<CR>
+nnoremap <leader>pa :action SearchEverywhere<CR>
+nnoremap <leader>ps :action FindInPath<CR>
+nnoremap <leader>pm :action ProjectViewPopupMenu<CR>
+nnoremap <leader>pp :action RecentProjectListGroup<CR>
+nnoremap <leader>pc :action CloseProject<CR>
+
+" Buffer Management
+nnoremap <leader>bX :action NewScratchBuffer<CR>
+nnoremap <leader>bd :q<CR>
+nnoremap <leader>bO :action CloseAllEditorsButActive<CR>
+nnoremap gw :action CloseEditor<CR>
+nnoremap gq :action CloseActiveTab<CR>
+nnoremap <leader>sw :action EditorToggleUseSoftWraps<CR>
+nnoremap <leader>gnc :action VcsShowNextChangeMarker<CR>
+nnoremap <leader>gpc :action VcsShowPrevChangeMarker<CR>
+nnoremap <leader>gnm :action MethodDown<CR>
+nnoremap <leader>gpm :action MethodUp<CR>
+nnoremap <leader>ch :action CallHierarchy<CR>
+
+" Multiple Cursors
+map <C-N>  <A-N>
+map <C-P>  <A-P>
+map <C-Q>  <A-X>
+map g<C-N> g<A-N>
+
+" Source Control
+nnoremap <leader>gg :action CheckinProject<CR>
+nnoremap <leader>gco :action Git.Branches<CR>
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gF :action Git.Pull<CR>
+nnoremap <leader>gp :action Vcs.Push<CR>
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>gcb :action Git.CompareWithBranch<CR>
+vnoremap <leader>lh :action LocalHistory.ShowHistory<CR>
+nnoremap <leader>lh :action LocalHistory.ShowHistory<CR>
+nnoremap <leader>grc :action Git.ResolveConflicts<CR>
+
+" diff
+nnoremap ,A :action Diff.AppendLeftSide<CR>
+nnoremap ,B :action Diff.AppendRightSide<CR>
+nnoremap ,a :action Diff.ApplyLeftSide<CR>
+nnoremap ,r :action Diff.ApplyNonConflicts<CR>
+nnoremap ,b :action Diff.ApplyRightSide<CR>
+nnoremap ,j :action NextDiff<CR>
+nnoremap ,J :action Diff.NextConflict<CR>
+nnoremap ,k :action PreviousDiff<CR>
+nnoremap ,K :action Diff.PreviousConflict<CR>
+
+" IdeavimManagement
+nnoremap <leader>fp :e ~/.ideavimrc<CR>
+noremap <leader>hr :source ~/.ideavimrc<CR>
+nnoremap <leader>al :actionlist<CR>
+nnoremap <A-x> :
+
 set relativenumber
 set showmode
 set multiple-cursors
 set ideajoin
 set easymotion
+set highlightedyank
 
 set idearefactormode
