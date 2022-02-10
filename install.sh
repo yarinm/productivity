@@ -3,26 +3,30 @@
 
 brew install \
      autojump \
+     aylei/tap/kubectl-debug \
      bat \
      coreutils \
      cscope \
      ctags \
      dep \
+     derailed/k9s/k9s \
      docker \
      fd \
+     flyway
      fpp \
      fzf \
      fzy \
      git \
+     git-lfs \
      go \
      grc \
      grpcurl \
      helm \
+     helm \
      htop \
+     jesseduffield/lazygit/lazygit \
      jq \
-     derailed/k9s/k9s \
      kube-ps1 \
-     aylei/tap/kubectl-debug \
      kubectx \
      kubernetes-cli \
      kubernetes-helm \
@@ -35,23 +39,28 @@ brew install \
      tig \
      tmux \
      topgrade \
-     jesseduffield/lazygit/lazygit
-     helmfile \
-     flyway \
-     weaveworks/tap/eksctl \ 
-     protoc \
-     protobuf \
-     helmfile
+     terraform \
+     pgcli \
+     teleprecense
 
-brew cask install copyq \
+brew cask install \
+     alfred \
+     discord \
+     docker \
      google-chrome \
+     microsoft-excel \
+     microsoft-powerpoint \
+     microsoft-word \
+     obsidian \
+     slack \
+     spectacle \
      spotify \
      telegram \
-     spectacle \
-     wireshark \
      visual-studio-code \
-     slack \
-     pgadmin4
+     zoom \
+     wireshark
+
+
 
 # installing Oh-my-zsh
 brew cask install iterm2
